@@ -5,9 +5,9 @@
         private $altura; // private diz que essa informação só pode ser usada dentro da classe
 
             // método construtor
-        public function __construct() {
-            $this -> altura = 1.75;
-            $this -> cor_dos_olhos = 'Rosa';
+        public function __construct($altura, $cor_dos_olhos) {
+            $this -> altura = $altura;
+            $this -> cor_dos_olhos = $cor_dos_olhos;
         }
 
         public function exibeCorDosOlhosEAltura() {
@@ -22,7 +22,7 @@
     }
     
     // Criação de um Objeto / Seção de Teste
-    $pessoa01 = new Humano();
+    $pessoa01 = new Humano(1.60, 'Marrom');
     $pessoa01 -> andar();
     echo '<br>';
     $pessoa01 -> exibeCorDosOlhosEAltura();
