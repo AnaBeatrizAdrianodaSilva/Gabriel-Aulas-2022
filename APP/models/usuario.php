@@ -1,4 +1,7 @@
 <?php
+
+    require_once __DIR__ . './bancoDeDadosFake.php';
+
     class Usuario {
         private $nome;
         private $login;
@@ -45,6 +48,7 @@
 
         public function verificarCredenciais($login, $senha) {
             foreach($this -> bancoFake() as $usuario) {
+                
                 if ($usuario['login'] == $login && $usuario['senha'] == $senha) {
                     return true;
                 }
@@ -53,30 +57,7 @@
         }
 
         private function bancoFake() {
-            return array(
-                [
-                    'login' => 'maria.silva', 
-                    'senha' => "123456",
-                    'nome' => "Maria Silva",
-                    'email' => "maria.silva@dominio.local",
-                ],
-
-                [
-                    'login' => 'joao.costa', 
-                    'senha' => "1548466",
-                    'nome' => "João de Oliveira Costa",
-                    'email' => "joao.costa@dominio.local",
-                ],
-
-                // Usuário criado para os testes
-
-                [
-                    'login' => 'gabriel',
-                    'senha' => '123',
-                    'nome' => 'Gabriel',
-                    'email' => 'gabriel@gmail.com',
-                ],
-            );
+            return BancoDeDadosFake::$usuarioTable;
         }
     }
 
@@ -85,9 +66,9 @@
     $usuario = new Usuario();
 
     if ($usuario -> verificarCredenciais('gabriel', 123))  {
-        echo 'Usuário existe no banco';
+        echo 'Credenciais válidas';
     } else {
-        echo 'Usuário não exite no banco';
+        echo 'Credenciais inválidas';
     }
 
 ?>
