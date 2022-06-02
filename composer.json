@@ -1,0 +1,12 @@
+{
+    "name": "ana.silva68/gabriel_aulas_2022",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "AnaSilva68\\GabrielAulas2022\\": "app/"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.7"
+    }
+}

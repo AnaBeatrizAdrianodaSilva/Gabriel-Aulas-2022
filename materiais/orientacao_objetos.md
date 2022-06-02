@@ -1,10 +1,10 @@
 # Orinetação a Obejtos
 
-É um paradigma de prgramação, que define uma forma de escrever sistemas.
+É um paradigma de programação, que define uma forma de escrever sistemas.
 
 Classe -> Como se fosse uma receita de bolo
 
-    propriedades -> Características -> Toda própriedade é um substantivo
+    propriedades -> Características -> Toda propriedade é um substantivo
     métodos -> Ações
 
     Classe Humano:
