@@ -3,9 +3,24 @@
     require_once __DIR__ . './bancoDeDadosFake.php';
 
     class Usuario {
+
+        /**
+         * @var string
+        **/
+
+
         private $nome;
+        /**
+         * @var string
+        **/
         private $login;
+        /**
+         * @var string
+        **/
         private $senha;
+        /**
+         * @var string
+        **/
         private $email;
 
         public function __construct() {
@@ -25,6 +40,10 @@
 
         public function setSenha($senha) {
             $this -> senha = $senha;
+        }
+
+        public function getSenha() {
+            return $this -> senha;
         }
 
         public function setEmail($email) {
